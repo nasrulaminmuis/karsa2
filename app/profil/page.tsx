@@ -93,6 +93,7 @@ export default function ProfilPage() {
   const [fatherData, setFatherData] = useState(initialFatherData)
   const [motherData, setMotherData] = useState(initialMotherData)
   const [isLoading, setIsLoading] = useState(false)
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
 
   const handleStudentDataChange = (field: string, value: string) => {
     setStudentData((prev) => ({ ...prev, [field]: value }))
@@ -111,7 +112,7 @@ export default function ProfilPage() {
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000))
     setIsLoading(false)
-    alert("Data berhasil disimpan!")
+    setShowSuccessModal(true)
   }
 
   return (
@@ -675,6 +676,25 @@ export default function ProfilPage() {
                 )}
               </Button>
             </div>
+            {/* Success Modal */}
+            {showSuccessModal && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-2xl p-8 max-w-sm mx-4 text-center">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-6">Data Berhasil Disimpan</h3>
+                  <Button
+                    onClick={() => setShowSuccessModal(false)}
+                    className="bg-[#7C20A1] hover:bg-[#701a75] text-white px-8 py-2 rounded-lg font-medium"
+                  >
+                    Simpan
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </main>

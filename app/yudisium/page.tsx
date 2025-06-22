@@ -4,6 +4,7 @@ import { AppNavbar } from "@/components/app-navbar"
 import { Card, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { X, Check, AlertCircle } from "lucide-react"
+import { useState } from "react"
 
 // Sample data for yudisium checklist
 const yudisiumChecklist = [
@@ -20,6 +21,8 @@ const yudisiumChecklist = [
 ]
 
 export default function YudisiumPage() {
+  const [showAlert, setShowAlert] = useState(true)
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "complete":
@@ -33,11 +36,25 @@ export default function YudisiumPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f3ff] dark:bg-gray-900 overflow-x-hidden">
+      {/* Alert Banner */}
+      {showAlert && (
+        <div className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+              <span className="text-blue-600 text-sm font-bold">i</span>
+            </div>
+            <span className="text-sm font-medium">Periode pendaftaran yudisium belum di buka.</span>
+          </div>
+          <button onClick={() => setShowAlert(false)} className="text-white hover:text-gray-200 transition-colors">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+      )}
       <AppSidebar />
       <AppNavbar />
 
       {/* Main Content */}
-      <main className="pt-20 pb-8 lg:ml-72 min-h-screen">
+      <main className={`pb-8 lg:ml-72 min-h-screen transition-all duration-300 ${showAlert ? "pt-32" : "pt-20"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           {/* Page Header */}
           <div className="mb-8">

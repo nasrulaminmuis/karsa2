@@ -361,13 +361,10 @@ export default function RencanaStudiPage() {
                   {/* Print Header */}
                   <div className="text-center mb-8 print:mb-6">
                     <div className="flex items-center justify-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-[#7C20A1] rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-xl">A</span>
+                      <div className="flex items-center justify-center h-72 w-72">
+                        <img src="/images/amikom-logo.png" alt="AMIKOM Logo" className="w-72 h-72 object-contain" />
                       </div>
-                      <div>
-                        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">UNIVERSITAS AMIKOM</h1>
-                        <h2 className="text-xl font-bold text-gray-900 dark:text-white">YOGYAKARTA</h2>
-                      </div>
+                      <div></div>
                     </div>
                   </div>
 

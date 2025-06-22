@@ -14,7 +14,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
-import { Download, Upload, Edit, Trash2 } from "lucide-react"
+import { Download, Upload, Edit, Trash2, X } from "lucide-react"
 
 // Sample data for different exam types
 const examData = {
@@ -66,6 +66,7 @@ export default function UjianPage() {
   const [activeTab, setActiveTab] = useState("uas")
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 3
+  const [showSusulanAlert, setShowSusulanAlert] = useState(false)
 
   const getCurrentData = () => {
     return examData[activeTab as keyof typeof examData] || []
@@ -98,8 +99,26 @@ export default function UjianPage() {
     setCurrentPage(page)
   }
 
+  const handleDaftarUjian = () => {
+    setShowSusulanAlert(true)
+  }
+
   return (
     <div className="min-h-screen bg-[#f5f3ff] dark:bg-gray-900 overflow-x-hidden">
+      {/* Susulan Alert */}
+      {showSusulanAlert && (
+        <div className="fixed top-0 left-0 right-0 z-50 bg-red-500 text-white px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Ujian SUSULAN untuk periode ini belum dibuka</span>
+          </div>
+          <button
+            onClick={() => setShowSusulanAlert(false)}
+            className="text-white hover:text-gray-200 transition-colors"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
       <AppSidebar />
       <AppNavbar />
 
@@ -146,7 +165,10 @@ export default function UjianPage() {
             {/* Daftar Ujian Button for Susulan */}
             {activeTab === "susulan" && (
               <div className="mb-4">
-                <Button className="bg-[#7C20A1] hover:bg-[#701a75] text-white px-6 py-2 rounded-lg">
+                <Button
+                  onClick={handleDaftarUjian}
+                  className="bg-[#7C20A1] hover:bg-[#701a75] text-white px-6 py-2 rounded-lg"
+                >
                   Daftar Ujian
                 </Button>
               </div>
