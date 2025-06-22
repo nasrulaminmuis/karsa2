@@ -158,7 +158,7 @@ export default function PembayaranPage() {
                       <SelectTrigger className="w-full">
                         <SelectValue placeholder="Pilih Bank" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="bg-white dark:bg-slate-800">
                         {bankOptions.map((option) => (
                           <SelectItem key={option.value} value={option.value}>
                             {option.label}

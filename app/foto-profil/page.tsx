@@ -113,7 +113,7 @@ export default function FotoProfilPage() {
             </div>
 
             {/* Upload Section */}
-            <Card className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl border-0 max-w-2xl mx-auto">
+            <Card className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl border-0 max-w-2xl">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
                   <Camera className="w-6 h-6 text-[#7C20A1]" />

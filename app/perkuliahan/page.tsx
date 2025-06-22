@@ -322,15 +322,15 @@ export default function PerkuliahanPage() {
                           key={classOption.id}
                           className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                             selectedClass === classOption.id
-                              ? "border-green-500 bg-green-50 dark:bg-green-900/20"
-                              : "border-gray-200 dark:border-gray-600 hover:border-[#7C20A1] hover:bg-[#f5f3ff] dark:hover:bg-[#7C20A1]/10"
+                              ? "border-primary bg-green-50 dark:bg-primary/20"
+                              : "border-gray-200 dark:border-gray-600 hover:border-[#7C20A1] hover:bg-[#f5f3ff] dark:hover:bg-primary/10"
                           }`}
                           onClick={() => handleClassChange(classOption.id)}
                         >
                           <div className="flex items-center gap-3">
                             <div className="flex-shrink-0">
                               {selectedClass === classOption.id ? (
-                                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
                                   <Check className="w-4 h-4 text-white" />
                                 </div>
                               ) : (

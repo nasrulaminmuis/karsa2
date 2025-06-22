@@ -300,7 +300,7 @@ export default function RencanaStudiPage() {
                       <div className="text-sm text-gray-600 dark:text-gray-400">(Klik Untuk Matkul Lintas)</div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-green-500 shadow-lg rounded-xl border-0">
+                  <Card className="bg-[#7C20A1] shadow-lg rounded-xl border-0">
                     <CardContent className="p-4 text-center">
                       <div className="text-white font-semibold">Mata Kuliah yang Dipilih</div>
                       <div className="text-white text-lg font-bold">Jumlah Sks Dipilih : {totalSks}</div>

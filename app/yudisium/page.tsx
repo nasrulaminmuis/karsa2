@@ -123,27 +123,6 @@ export default function YudisiumPage() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Additional Information */}
-            <Card className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl border-0">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Informasi Yudisium</h3>
-                <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-                  <div className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-[#7C20A1] rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Yudisium adalah sidang penentuan kelulusan mahasiswa</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-[#7C20A1] rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Pastikan semua persyaratan akademik telah terpenuhi</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="w-2 h-2 bg-[#7C20A1] rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Hubungi bagian akademik jika ada pertanyaan mengenai persyaratan</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </main>

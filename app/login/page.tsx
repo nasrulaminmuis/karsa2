@@ -99,7 +99,7 @@ export default function LoginPage() {
                 type="text"
                 value={nim}
                 onChange={(e) => setNim(e.target.value)}
-                placeholder="NPM/NIM Amikom"
+                placeholder="NIM Amikom"
                 className="mt-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 required
               />
@@ -143,18 +143,13 @@ export default function LoginPage() {
               <Label htmlFor="recaptcha" className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
                 Saya bukan robot
               </Label>
-              <div className="ml-auto">
-                <div className="w-8 h-8 bg-blue-500 rounded flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-sm"></div>
-                </div>
-              </div>
             </div>
 
             {/* Login Button */}
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-medium text-base shadow-lg transition-colors"
+              className="w-full bg-[#7C20A1] hover:bg-[#701a75] text-white py-3 px-4 rounded-lg font-medium text-base shadow-lg transition-colors"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center gap-2">
@@ -200,7 +195,7 @@ export default function LoginPage() {
           {/* Footer Links */}
           <div className="text-center space-y-2">
             <div className="text-sm text-gray-500 dark:text-gray-400">
-              <a href="#" className="hover:text-purple-600 transition-colors">
+              <a href="#" className=" transition-colors">
                 Lupa Password?
               </a>
             </div>

@@ -228,7 +228,7 @@ export default function UjianPage() {
                                 {"mataKuliah" in item ? item.mataKuliah : ""}
                               </TableCell>
                               <TableCell className="text-center py-4">
-                                <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75]">
+                                <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75] dark:text-purple-400 dark:hover:text-purple-300">
                                   <Download className="w-4 h-4" />
                                 </Button>
                               </TableCell>
@@ -237,13 +237,13 @@ export default function UjianPage() {
                               </TableCell>
                               <TableCell className="text-center py-4">
                                 <div className="flex justify-center gap-2">
-                                  <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75]">
+                                  <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75] dark:text-purple-400 dark:hover:text-purple-300">
                                     <Upload className="w-4 h-4" />
                                   </Button>
-                                  <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75]">
+                                  <Button variant="ghost" size="sm" className="text-[#7C20A1] hover:text-[#701a75] dark:text-purple-400 dark:hover:text-purple-300">
                                     <Edit className="w-4 h-4" />
                                   </Button>
-                                  <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700">
+                                  <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700 dark:text-red-500 dark:hover:text-red-400">
                                     <Trash2 className="w-4 h-4" />
                                   </Button>
                                 </div>

@@ -114,7 +114,7 @@ export default function PanduanPage() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-[#7C20A1] text-[#7C20A1] hover:bg-[#7C20A1] hover:text-white px-6 py-3 rounded-lg"
+                    className="border-[#7C20A1] text-[#7C20A1] hover:bg-[#7C20A1] dark:bg-[#7C20A1] dark:text-white hover:text-white px-6 py-3 rounded-lg"
                   >
                     FAQ
                   </Button>

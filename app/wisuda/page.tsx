@@ -83,14 +83,6 @@ export default function WisudaPage() {
                     </p>
                   </div>
                 </div>
-                <div className="text-center mt-6">
-                  <Button
-                    onClick={handleContactCommittee}
-                    className="bg-[#7C20A1] hover:bg-[#701a75] text-white px-8 py-3 rounded-lg font-medium"
-                  >
-                    Hubungi Panitia Wisuda
-                  </Button>
-                </div>
               </CardContent>
             </Card>
 
@@ -118,33 +110,6 @@ export default function WisudaPage() {
                   <div className="flex items-start gap-3">
                     <GraduationCap className="w-5 h-5 text-[#7C20A1] flex-shrink-0 mt-0.5" />
                     <span>Melengkapi berkas administrasi wisuda</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Important Dates */}
-            <Card className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl border-0">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Jadwal Wisuda</h3>
-                <div className="bg-[#f5f3ff] dark:bg-[#7C20A1]/10 rounded-lg p-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">Periode Wisuda:</span>
-                      <p className="text-gray-600 dark:text-gray-400">Mei 2025</p>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">Batas Pendaftaran:</span>
-                      <p className="text-gray-600 dark:text-gray-400">31 Maret 2025</p>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">Gladi Bersih:</span>
-                      <p className="text-gray-600 dark:text-gray-400">15 Mei 2025</p>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">Hari Wisuda:</span>
-                      <p className="text-gray-600 dark:text-gray-400">17 Mei 2025</p>
-                    </div>
                   </div>
                 </div>
               </CardContent>
