@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Light mode - Violet background theme */
-    --background: 245 243 255; /* #f5f3ff - violet-50 */
+    --background: 248 250 252; /* slate-50 - cleaner light background */
     --foreground: 17 24 39;
     --card: 255 255 255;
     --card-foreground: 17 24 39;
@@ -13,11 +13,11 @@
     --popover-foreground: 17 24 39;
     --primary: 124 32 161; /* #7C20A1 */
     --primary-foreground: 255 255 255;
-    --secondary: 245 243 255; /* #f5f3ff */
+    --secondary: 245 243 255; /* violet-50 */
     --secondary-foreground: 124 32 161;
-    --muted: 243 244 246;
+    --muted: 241 245 249; /* slate-100 */
     --muted-foreground: 107 114 128;
-    --accent: 245 243 255;
+    --accent: 237 233 254; /* violet-100 */
     --accent-foreground: 124 32 161;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
@@ -41,8 +41,8 @@
     --secondary-foreground: 248 250 252;
     --muted: 51 65 85;
     --muted-foreground: 148 163 184;
-    --accent: 51 65 85;
-    --accent-foreground: 248 250 252;
+    --accent: 67 56 202; /* violet-800 - darker accent for dark mode */
+    --accent-foreground: 221 214 254; /* violet-200 */
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
     --border: 51 65 85;
