@@ -63,7 +63,7 @@ export function AppNavbar() {
         </div>
 
         {/* Right side - Responsive */}
-        <div className="flex items-center gap-2 lg:gap-4 flex-shrink-0">
+        <div className="flex items-center gap-2 lg:gap-4 flex-shrink-0 px-0">
           {/* Notification */}
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="w-5 h-5 text-slate-600 dark:text-slate-400" />
@@ -78,7 +78,7 @@ export function AppNavbar() {
                 className="bg-violet-600 rounded-full px-2 lg:px-4 py-2 flex items-center gap-2 lg:gap-3 shadow-md hover:bg-violet-700"
               >
                 <div
-                  className="w-6 h-6 lg:w-8 lg:h-8 bg-white rounded-full flex items-center justify-center cursor-pointer"
+                  className="w-6 h-6 lg:w-8 lg:h-8 bg-white rounded-full flex items-center justify-center cursor-pointer mx-0 gap-x-0 mt-0"
                   onClick={handlePhotoClick}
                 >
                   <span className="text-violet-600 font-semibold text-xs lg:text-sm">

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -24,9 +25,10 @@ export default function HomePage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-center h-24 sm:h-32">
-                  <div className="grid grid-cols-6 gap-1 sm:gap-2 h-16 sm:h-20">
-                    {[40, 60, 80, 70, 90, 85].map((height, i) => (
+                <div className="flex flex-col items-center">
+                  <div className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">4.00</div>
+                  <div className="grid grid-cols-6 gap-1 sm:gap-2 h-16 sm:h-20 items-end w-auto">
+                    {[100, 100, 100, 100, 100, 100].map((height, i) => (
                       <div
                         key={i}
                         className="bg-violet-600 rounded-sm w-3 sm:w-4"
@@ -34,6 +36,14 @@ export default function HomePage() {
                       ></div>
                     ))}
                   </div>
+                  <div className="grid grid-cols-6 gap-1 sm:gap-2 mt-1 w-full">
+                    {["SMT 1", "SMT 2", "SMT 3", "SMT 4", "SMT 5", "SMT 6"].map((label, i) => (
+                      <div key={i} className="text-xs text-center text-slate-500">
+                        {label}
+                      </div>
+                    ))}
+                  </div>
+                  
                 </div>
               </CardContent>
             </Card>
@@ -52,13 +62,13 @@ export default function HomePage() {
                         d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         fill="none"
                         stroke="#e2e8f0"
-                        strokeWidth="2"
+                        strokeWidth="3"
                       />
                       <path
                         d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                         fill="none"
                         stroke="rgb(124 58 237)"
-                        strokeWidth="2"
+                        strokeWidth="3"
                         strokeDasharray="100, 100"
                       />
                     </svg>
@@ -177,11 +187,7 @@ export default function HomePage() {
                 <div className="text-center">
                   <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-3">Scan QR Code</div>
                   <div className="w-24 h-24 sm:w-28 sm:h-28 bg-slate-200 dark:bg-slate-700 rounded-lg mx-auto flex items-center justify-center">
-                    <div className="grid grid-cols-10 gap-px">
-                      {Array.from({ length: 100 }, (_, i) => (
-                        <div key={i} className={`w-1 h-1 ${Math.random() > 0.5 ? "bg-black" : "bg-white"}`}></div>
-                      ))}
-                    </div>
+                    <Image src="/images/qr-code.png" alt="QR Code" width={112} height={112} />
                   </div>
                 </div>
               </CardContent>
